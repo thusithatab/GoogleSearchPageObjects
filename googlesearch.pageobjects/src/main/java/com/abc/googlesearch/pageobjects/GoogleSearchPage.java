@@ -25,11 +25,23 @@ public class GoogleSearchPage extends BasePageObject {
 	By googleSearchTextField = By.name("q");
 	By googleSearchBtn = By.name("btnK");
 
+	/**
+	 * 
+	 * @param searchText
+	 * @throws Exception
+	 * Type the parameterized text in to google search field
+	 */
 	public void typeSearchText(String searchText) throws Exception{
 
 		writeText(googleSearchTextField, searchText);
 	}
 
+	/**
+	 * 
+	 * @return
+	 * @throws Exception
+	 * click on the google search button and pass the web driver to the search results page
+	 */
 	public GoogleSearchResultsPage clickSearchButton() throws Exception{
 
 		click(googleSearchBtn);

@@ -17,7 +17,13 @@ public class NavigatedWebPage extends BasePageObject {
 		super(driver);
 	}
 
-	public String getPageTitle() throws Exception{
+	/**
+	 * 
+	 * @return
+	 * @throws Exception
+	 * get the title of the displayed web page
+	 */
+	public String getPageTitle() throws Exception {
 
 		return driver.getTitle();
 	}

@@ -22,6 +22,13 @@ public class GoogleSearchResultsPage extends BasePageObject {
 
 	}
 
+	/**
+	 * 
+	 * @param ResultNumberToClick
+	 * @return
+	 * @throws Exception
+	 * click on the parameterized results link. It ignore the 'people also view' and video results. Then pass the web driver to the next page
+	 */
 	public NavigatedWebPage clickOnResult(int ResultNumberToClick) throws Exception {
 
 		int resultsSetOne = driver.findElements(By.xpath("//div[@class='bkWMgd'][1]//div[@class='g']")).size();

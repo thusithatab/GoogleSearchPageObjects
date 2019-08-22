@@ -25,25 +25,45 @@ public class BasePageObject {
 
 	}
 
+	/**
+	 * 
+	 * @param elementBy 
+	 * wait till element is visible
+	 */
 	public void waitTillVisible(By elementBy) {
 		wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(elementBy));
 	}
 
+	/**
+	 * 
+	 * @param elementBy 
+	 * click element after it is visible
+	 */
 	public void click(By elementBy) {
 		waitTillVisible(elementBy);
 		driver.findElement(elementBy).click();
 	}
 
+	/**
+	 * 
+	 * @param elementBy
+	 * @param text      
+	 * input given text to the element
+	 */
 	public void writeText(By elementBy, String text) {
 		waitTillVisible(elementBy);
 		driver.findElement(elementBy).sendKeys(text);
 	}
 
+	/**
+	 * 
+	 * @param elementBy
+	 * @return
+	 * read a text in an element
+	 */
 	public String readText(By elementBy) {
 		waitTillVisible(elementBy);
 		return driver.findElement(elementBy).getText();
 	}
-	
-	
 
 }
